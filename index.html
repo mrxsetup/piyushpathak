@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS PREDICTION</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- 🔥 INLINE CSS (NO CONFLICT) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+        }
+
+        .hero {
+            width: 360px;
+            background: #000;
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(0, 212, 255, .4);
+        }
+
+        .profile-picture img {
+            height: 110px;
+            width: 110px;
+            border-radius: 50%;
+            border: 4px solid #00d4ff;
+            box-shadow: 0 0 20px #00d4ff;
+        }
+
+        .heading1 {
+            margin-top: 15px;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .subscriber-counter {
+            margin: 15px 0;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* 🔥 BUTTON EFFECTS */
+
+        .button {
+            margin: 20px 0;
+        }
+
+        .btn {
+            position: relative;
+            display: block;
+            padding: 15px;
+            border-radius: 14px;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            background: linear-gradient(270deg, #00c6ff, #0072ff, #00ffcc);
+            background-size: 600% 600%;
+            animation: gradientMove 4s ease infinite, pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(0, 198, 255, .8);
+            transition: transform .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 35px rgba(0, 255, 204, 1);
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1)
+            }
+            50% {
+                transform: scale(1.03)
+            }
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        /* POINTS */
+
+        .points ul {
+            list-style: none;
+            margin: 20px 0;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .points li {
+            margin: 10px 0;
+        }
+    </style>
+
+    <!-- Meta Pixel -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1688263452559551');
+        fbq('track', 'PageView');
+    </script>
+
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="profile-picture">
+            <img src="https://github.com/bestanalystt/SS_PREDICTION/blob/main/ssbhaiyalogo.jpg?raw=true">
+        </div>
+
+        <h1 class="heading1">👑 SS PREDICTION 👑</h1>
+
+        <div class="subscriber-counter" id="subscriber-count">66697 Subscribers</div>
+
+        <div class="button">
+            <a href="https://t.me/+Pmkpdct0ZHZiYjNl" class="btn">
+Join Cricket Ka Sabse Bada Tipper <i class="fa-brands fa-telegram"></i>
+</a>
+        </div>
+
+        <div class="points">
+            <ul>
+                <li>🏆 IPL - 75 / 77 PASS</li>
+                <li>🏆 BBL - 67 / 67 PASS</li>
+                <li>🏆 PSL - 34 / 35 PASS</li>
+            </ul>
+        </div>
+
+        <div class="button">
+            <a href="https://t.me/+Pmkpdct0ZHZiYjNl" class="btn">
+SUBSCRIBE FOR FREE <i class="fa-brands fa-telegram"></i>
+</a>
+        </div>
+
+    </div>
+
+    <script>
+        const target = 66697,
+            duration = 7200,
+            el = document.getElementById("subscriber-count");
+        let start = null;
+
+        function animate(t) {
+            if (!start) start = t;
+            let p = t - start;
+            let c = Math.min(Math.floor((p / duration) * target), target);
+            el.innerText = c.toLocaleString() + " Subscribers";
+            if (c < target) requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+    </script>
+
+</body>
+
+</html>
